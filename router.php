@@ -23,16 +23,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-
-/*
-In .htaccess the following lines
-RewriteEngine On
-# Direct access to files with the following extensions
-RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.zip|\.css|\.js)$
-# Any request goes to index.php
-RewriteRule (.*) index.php [QSA,L]
-*/
-
 function get($route, $function_to_call){
   if( $_SERVER['REQUEST_METHOD'] == "GET" ){
     route($route, $function_to_call);
