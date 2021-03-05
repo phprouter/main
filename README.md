@@ -1,5 +1,4 @@
 # router_xss_csrf
-Secure router with XSS and CSRF
 
 Secure router with XSS and CSRF
 
