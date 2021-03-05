@@ -1,0 +1,49 @@
+@media screen and (min-width: 500px){
+  nav{
+    padding: 0 calc(10%);
+  }
+  main{
+    padding-right: calc(10%);
+    padding-left: calc(10%);
+  }  
+}
+
+@media screen and (min-width: 700px){
+  nav{
+    padding: 0 calc(20%);
+  }
+  main, footer{
+    padding-right: calc(20%);
+    padding-left: calc(20%);
+  }  
+}
+
+@media screen and (min-width: 900px){
+  nav{
+    padding: 0 calc(30%);
+  }
+  main, footer{
+    padding-right: calc(30%);
+    padding-left: calc(30%);
+  }  
+}
+
+@media screen and (min-width: 1100px){
+  nav{
+    padding: 0 calc(35%);
+  }
+  main, footer{
+    padding-right: calc(35%);
+    padding-left: calc(35%);
+  }  
+}
+
+@media screen and (min-width: 1400px){
+  nav{
+    padding: 0 calc(37%);
+  }
+  main, footer{
+    padding-right: calc(37%);
+    padding-left: calc(37%);
+  }  
+}
