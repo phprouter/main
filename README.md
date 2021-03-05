@@ -1,4 +1,5 @@
-# router_xss_csrf
+# PHP ROUTER
+
 Secure router with XSS and CSRF
 
 1. Download the file ".htaccess" and place it under the root directory of your application. Usually this is a folder called "htdocs" or "www".
