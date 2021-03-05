@@ -12,4 +12,4 @@ In the browser go to "localhost" or "127.0.0.1" and you should see the word "Ind
 
 Feel free to delete all the routes in the "index.php" file and create your own. Most likely you want to keep the last route for "Page not found".
 
-any('/404', 'error404'); function error404(){ echo 'Not found'; exit(); }
+For details about routing, visit https://phprouter.com/routing
