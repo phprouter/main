@@ -2,11 +2,11 @@
 
 Secure router with XSS and CSRF
 
-1. Download the file ".htaccess" and place it under the root directory of your application. Usually this is a folder called "htdocs" or "www".
+1. Download the file ".htaccess" and place it under the root directory of your application
 
-2. Download the file "router.php" and place it under the root directory of your application. Usually this is a folder called "htdocs" or "www".
+2. Download the file "router.php" and place it under the root directory of your application
 
-3. Download the file "index.php" and place it under the root directory of your application. Usually this is a folder called "htdocs" or "www".
+3. Download the file "index.php" and place it under the root directory of your application
 
 In the browser go to "localhost" or "127.0.0.1" and you should see the word "Index" displayed in the website.
 
