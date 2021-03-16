@@ -6,7 +6,7 @@ Secure router with XSS and CSRF
 
 2. Download the file "router.php" and place it under the root directory of your application
 
-3. Download the file "index.php" and place it under the root directory of your application
+3. Download the file "routes.php" and place it under the root directory of your application
 
 In the browser go to "localhost" or "127.0.0.1" and you should see the word "Index" displayed in the website.
 
