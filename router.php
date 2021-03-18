@@ -1,10 +1,13 @@
 <?php
 
 function get($route, $function_to_call){
-  if( $_SERVER['REQUEST_METHOD'] == "GET" ){ route($route, $function_to_call); }  
+  if( $_SERVER['REQUEST_METHOD'] == 'GET' ){ route($route, $function_to_call); }  
 }
 function post($route, $function_to_call){
-  if( $_SERVER['REQUEST_METHOD'] == "POST" ){ route($route, $function_to_call); }    
+  if( $_SERVER['REQUEST_METHOD'] == 'POST' ){ route($route, $function_to_call); }    
+}
+function delete($route, $function_to_call){
+  if( $_SERVER['REQUEST_METHOD'] == 'DELETE' ){ route($route, $function_to_call); }    
 }
 function any($route, $function_to_call){ route($route, $function_to_call); }
 function route($route, $function_to_call){
@@ -16,11 +19,11 @@ function route($route, $function_to_call){
   $request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
   $request_url = rtrim($request_url, '/');
   $request_url = strtok($request_url, '?');
-  $route_parts = explode("/", $route);
-  $request_url_parts = explode("/", $request_url);
+  $route_parts = explode('/', $route);
+  $request_url_parts = explode('/', $request_url);
   array_shift($route_parts);
   array_shift($request_url_parts);
-  if( $route_parts[0] == "" && count($request_url_parts) == 0 ){
+  if( $route_parts[0] == '' && count($request_url_parts) == 0 ){
     call_user_func_array($function_to_call, []);
     exit();
   }
