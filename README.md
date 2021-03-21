@@ -10,6 +10,6 @@ Secure router with XSS and CSRF
 
 In the browser go to "localhost" or "127.0.0.1" and you should see the word "Index" displayed in the website.
 
-Feel free to delete all the routes in the "index.php" file and create your own. Most likely you want to keep the last route for "Page not found".
+Feel free to delete all the routes in the "routes.php" file and create your own. Most likely you want to keep the last route for "Page not found".
 
 For details about routing, visit https://phprouter.com/routing
