@@ -18,7 +18,6 @@ function any($route, $path_to_include){ route($route, $path_to_include); }
 function route($route, $path_to_include){
   $ROOT = $_SERVER['DOCUMENT_ROOT'];
   if($route == "/404"){
-    http_response_code(404);
     include_once("$ROOT/$path_to_include");
     exit();
   }  
