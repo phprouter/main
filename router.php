@@ -53,9 +53,8 @@ function route($route, $path_to_include){
 }
 function out($text){echo htmlspecialchars($text);}
 function set_csrf(){
-  $csrf_token = bin2hex(random_bytes(25));
-  $_SESSION['csrf'] = $csrf_token;
-  echo '<input type="hidden" name="csrf" value="'.$csrf_token.'">';
+  if( ! isset($_SESSION["csrf"]) ){ $_SESSION["csrf"] = bin2hex(random_bytes(50)); }
+  echo '<input type="hidden" name="csrf" value="'.$_SESSION["csrf"].'">';
 }
 function is_csrf_valid(){
   if( ! isset($_SESSION['csrf']) || ! isset($_POST['csrf'])){ return false; }
