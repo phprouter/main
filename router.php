@@ -24,6 +24,10 @@ function route($route, $path_to_include){
   
   $ROOT = $_SERVER['DOCUMENT_ROOT'];
   if($route == "/404"){
+    if (is_callable($path_to_include)) {
+      call_user_func($path_to_include);
+      exit();
+    }
     include_once("$ROOT/$path_to_include");
     exit();
   }  
