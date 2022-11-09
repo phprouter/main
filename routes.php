@@ -54,4 +54,9 @@ get('/callback/$name/$last_name', function($name, $last_name){
 // For GET or POST
 // The 404.php which is inside the views folder will be called
 // The 404.php has access to $_GET and $_POST
-any('/404','views/404.php');
+if (php_sapi_name() != 'cli-server') {
+  any('/404','views/404.php');
+} else {
+  // If the built-in PHP testserver is used, don't show 404 page otherwise files will not be shown.
+  return false;
+}
