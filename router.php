@@ -35,6 +35,11 @@ function route($route, $path_to_include){
   array_shift($route_parts);
   array_shift($request_url_parts);
   if( $route_parts[0] == '' && count($request_url_parts) == 0 ){
+    // Callback function
+    if( is_callable($callback) ){
+      call_user_func_array($callback, []);
+      exit();
+    }
     include_once __DIR__."/$path_to_include";
     exit();
   }
