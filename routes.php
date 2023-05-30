@@ -39,12 +39,23 @@ get('/callback/$name', function($name){
   echo "Callback executed. The name is $name";
 });
 
+// Route where the query string happends right after a forward slash
+get('/product', '');
+
 // A route with a callback passing 2 variables
 // To run this route, in the browser type:
 // http://localhost/callback/A/B
 get('/callback/$name/$last_name', function($name, $last_name){
   echo "Callback executed. The full name is $name $last_name";
 });
+
+// ##################################################
+// ##################################################
+// ##################################################
+// Route that will use POST data
+post('/user', '/api/save_user');
+
+
 
 // ##################################################
 // ##################################################
